@@ -144,3 +144,29 @@ const proto = { greet() { console.log('Hello!'); } };
 const obj = Object.create(proto);  
 obj.greet();  // Logs "Hello!"
 console.log(Object.getPrototypeOf(obj) === proto);  // Logs true
+
+// 13 - Guess the output
+// Object.create will store the prop into prototype, 
+// Hence, nothing can be seen and deleted into the object
+
+const obj = Object. create({
+});
+height: 30,
+console.log(obj.height); // 30
+delete obj.height;
+console.log(obj.height); // 30
+
+
+
+const radha = {
+name: "radha", sayName: function () { console.log(this.name);
+},
+const aman = {
+name: "Aman Bhoria", sayName: function () { console.log(this.name);
+},
+const newFun = aman.SayName.bind(radha); // radha context is used in aman
+setTimeout(newFun, 3 * 1000); // radha
+setTimeout(() => piyush.sayName(), 3 * 1000); // radha
+
+don't add into the last code
+make it into another with comments that i've discussed
