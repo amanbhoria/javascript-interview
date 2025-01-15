@@ -157,7 +157,7 @@ delete obj.height;
 console.log(obj.height); // 30
 
 
-
+// 14 - Guess the output
 const radha = {
 name: "radha", sayName: function () { console.log(this.name);
 },
@@ -167,6 +167,3 @@ name: "Aman Bhoria", sayName: function () { console.log(this.name);
 const newFun = aman.SayName.bind(radha); // radha context is used in aman
 setTimeout(newFun, 3 * 1000); // radha
 setTimeout(() => piyush.sayName(), 3 * 1000); // radha
-
-don't add into the last code
-make it into another with comments that i've discussed
