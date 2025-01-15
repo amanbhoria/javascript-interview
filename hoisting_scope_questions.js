@@ -104,3 +104,43 @@ var a = 10;
         console.log(a); // 20
     })();
 })();
+
+// --------------------
+
+// 10. What will be the output of the following code? 
+// The .call() method allows you to invoke a function with a specific context, in this case, obj2.
+// It will log 'Hello, Bob' since 'this' refers to obj2 inside the greet function.
+
+const obj1 = {  
+  name: 'Alice',  
+  greet() {  
+    console.log(`Hello, ${this.name}`);  
+  }  
+};  
+const obj2 = { name: 'Bob' };  
+obj1.greet.call(obj2);  // Logs "Hello, Bob"
+
+// --------------------
+
+// 11. What will be the output of the following code? 
+// The .bind() method creates a new function with a specific context. 
+// Here, getValue is bound to obj, and it will log the value of obj.value.
+
+const obj = {  
+  value: 42  
+};  
+const getValue = function () {  
+  return this.value;  
+}.bind(obj);  
+console.log(getValue());  // Logs 42
+
+// --------------------
+
+// 12. What will be the output of the following code? 
+// The Object.create() method creates a new object with the specified prototype object. 
+// Here, obj's prototype is proto, and it will inherit the greet method.
+
+const proto = { greet() { console.log('Hello!'); } };  
+const obj = Object.create(proto);  
+obj.greet();  // Logs "Hello!"
+console.log(Object.getPrototypeOf(obj) === proto);  // Logs true
